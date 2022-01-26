@@ -28,6 +28,10 @@ function getBaseUrl() {
   if (process.browser) {
     return '';
   }
+  // reference for stackblitz.com
+  if (process.env.STACKBLITZ) {
+    return '';
+  }
   // reference for vercel.com
   if (process.env.VERCEL_URL) {
     return `https://${process.env.VERCEL_URL}`;
